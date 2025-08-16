@@ -6,6 +6,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(bottomNavigationBar: MyBottomNavBar());
+    int _selectedIndex = 0;
+
+    void navigateBottomBar(int index) {
+
+    }
+    
+    return Scaffold(
+      bottomNavigationBar: MyBottomNavBar(
+        onTabChange: (index) => navigateBottomBar(index),
+      ),
+    );
   }
 }
