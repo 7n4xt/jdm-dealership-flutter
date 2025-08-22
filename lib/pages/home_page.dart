@@ -38,7 +38,19 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        backgroundColor: Colors.grey.shade900,
+        child: Column(
+          children: [
+            DrawerHeader(
+              child: Image.asset(
+                'lib/images/car-stainless-logo-png.webp',
+                height: 200,
+              ),
+            ),
+          ],
+        ),
+      ),
       body: _pages[_selectedIndex],
     );
   }
